@@ -1,6 +1,4 @@
-# coding=utf-8
-""" Full assembly of the parts to form the complete network """
-"""Refer https://github.com/milesial/Pytorch-UNet/blob/master/unet/unet_model.py"""
+
 
 import torch.nn.functional as F
 
@@ -36,7 +34,7 @@ class UNet(nn.Module):
         self.zyl = SelfAttention(8,128,128,0.4,0.4)
 
 
-        # 反卷积
+      
         self.up = Up()
         self.CT1 = ConvTranspose2d3(256,128)
         self.CT2 = ConvTranspose2d3(256,128)
